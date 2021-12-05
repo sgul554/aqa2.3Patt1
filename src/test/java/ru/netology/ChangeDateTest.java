@@ -23,7 +23,7 @@ class ChangeDateTest {
         $("[data-test-id=phone] input").setValue(DataGenerator.generatePhone());
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=notification]")
+        $(".notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText("Встреча успешно запланирована на " + FirstDate));
 
